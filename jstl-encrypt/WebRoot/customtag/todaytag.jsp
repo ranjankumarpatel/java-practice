@@ -1,4 +1,4 @@
-<%@ taglib uri="customTag" prefix="ct" %>
+<%@ taglib uri="todayTag" prefix="ct" %>
 <!DOCTYPE>
 <html>
 <head>
