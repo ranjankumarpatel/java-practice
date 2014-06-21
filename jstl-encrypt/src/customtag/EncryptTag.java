@@ -1,21 +1,20 @@
 package customtag;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.TagSupport;
 
-public class TodayTag extends TagSupport {
+import org.jasypt.util.text.BasicTextEncryptor;
+
+public class EncryptTag extends TagSupport {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 3033779055703904010L;
 
-	private String format;
+	private String value;
 	
 	@Override
 	public int doEndTag() throws JspException {
@@ -27,9 +26,9 @@ public class TodayTag extends TagSupport {
 	public int doStartTag() throws JspException {
 		 try {
 	            JspWriter out = pageContext.getOut();
-	            Date today = new Date();
-	            SimpleDateFormat dateFormatter = new SimpleDateFormat(format);
-	            out.print(dateFormatter.format(today));
+	            BasicTextEncryptor encryptor = new BasicTextEncryptor();
+	    		encryptor.setPassword("patel");
+	            out.print(encryptor.encrypt(value));
 	            
 	        } catch(IOException ioe) {
 	            throw new JspException("Error: " + ioe.getMessage());
@@ -38,13 +37,17 @@ public class TodayTag extends TagSupport {
 		 return SKIP_BODY;
 	}
 
-	public String getFormat() {
-		return format;
+	public String getValue() {
+		return value;
 	}
 
-	public void setFormat(String format) {
-		this.format = format;
+	public void setValue(String value) {
+		this.value = value;
 	}
+
+	
+
+	
 
 	
 

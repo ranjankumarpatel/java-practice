@@ -1,16 +1,11 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="enc" uri="encryptTag" %>
-<!DOCTYPE html>
+<%@ taglib uri="encryptTag" prefix="enc" %>
+<!DOCTYPE>
 <html>
 <head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-<c:url value="./encryptTag.jsp" var="test">
-<enc:encryptparam name="enparam">ranjan</enc:encryptparam>
-</c:url>
-<a href="${test}">hghgh</a>
-<h2 align="center"><c:out value="${param.enparam}"/></h2>
+<h2 align="center"><enc:encrypt value="ranjan kumar patel"/></h2>
 </body>
 </html>

@@ -11,12 +11,12 @@
   </welcome-file-list>
     <jsp-config>
         <taglib>
-            <taglib-uri>encryptTag</taglib-uri>
-            <taglib-location>/META-INF/encryptTag.tld</taglib-location>
+            <taglib-uri>encryptParamTag</taglib-uri>
+            <taglib-location>/META-INF/encryptParamTag.tld</taglib-location>
         </taglib>
         <taglib>
-            <taglib-uri>todayTag</taglib-uri>
-            <taglib-location>/META-INF/today.tld</taglib-location>
+            <taglib-uri>encryptTag</taglib-uri>
+            <taglib-location>/META-INF/encryptTag.tld</taglib-location>
         </taglib>
     </jsp-config>
 </web-app>
