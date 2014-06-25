@@ -9,7 +9,7 @@
  </validator>
  <tag>
   <name>encryptparam</name>
-  <tag-class>customtag.ParamEncryptTag</tag-class>
+  <tag-class>org.encryption.taglib.ParamEncryptTag</tag-class>
   <body-content>JSP</body-content>
   <attribute>
    <name>name</name>

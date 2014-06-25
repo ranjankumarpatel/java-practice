@@ -1,13 +1,14 @@
-package customtag;
+package org.encryption.taglib;
 
 import java.io.IOException;
+
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.TagSupport;
 
-import org.jasypt.util.text.BasicTextEncryptor;
+import org.encryption.encrypt.EncryptionUtility;
 
-public class EncryptTag extends TagSupport {
+public class DecryptTag extends TagSupport {
 
 	/**
 	 * 
@@ -25,10 +26,8 @@ public class EncryptTag extends TagSupport {
 	@Override
 	public int doStartTag() throws JspException {
 		 try {
-	            JspWriter out = pageContext.getOut();
-	            BasicTextEncryptor encryptor = new BasicTextEncryptor();
-	    		encryptor.setPassword("patel");
-	            out.print(encryptor.encrypt(value));
+	            JspWriter out = pageContext.getOut();	            
+	            out.print(EncryptionUtility.decryptText(value));
 	            
 	        } catch(IOException ioe) {
 	            throw new JspException("Error: " + ioe.getMessage());

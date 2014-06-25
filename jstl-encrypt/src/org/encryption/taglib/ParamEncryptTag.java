@@ -1,4 +1,4 @@
-package customtag;
+package org.encryption.taglib;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspTagException;
@@ -8,7 +8,7 @@ import org.apache.taglibs.standard.resources.Resources;
 import org.apache.taglibs.standard.tag.common.core.ParamParent;
 import org.apache.taglibs.standard.tag.common.core.ParamSupport;
 import org.apache.taglibs.standard.tag.common.core.Util;
-import org.jasypt.util.text.BasicTextEncryptor;
+import org.encryption.encrypt.EncryptionUtility;
 
 public class ParamEncryptTag extends ParamSupport {
 	
@@ -22,8 +22,7 @@ public class ParamEncryptTag extends ParamSupport {
 	@Override
 	public int doEndTag() throws JspException {
 		
-		BasicTextEncryptor encryptor = new BasicTextEncryptor();
-		encryptor.setPassword("patel");
+		
 		
 		 Tag localTag = findAncestorWithClass(this, ParamParent.class);
 		    if (localTag == null) {
@@ -38,7 +37,7 @@ public class ParamEncryptTag extends ParamSupport {
 		      if ((this.bodyContent == null) || (this.bodyContent.getString() == null)) {
 		        str1 = "";
 		      } else {
-		        str1 = encryptor.encrypt(this.bodyContent.getString().trim());
+		        str1 = EncryptionUtility.encryptText(this.bodyContent.getString().trim());
 		      }
 		    }
 		    if (this.encode)
