@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.encryption</groupId>
+  <artifactId>EncryptionUtility</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>EncryptionUtility</name>
+  <build/>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.glassfish.web</groupId>
+  		<artifactId>javax.servlet.jsp.jstl</artifactId>
+  		<version>1.2.2</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.jasypt</groupId>
+  		<artifactId>jasypt</artifactId>
+  		<version>1.9.2</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>commons-codec</groupId>
+  		<artifactId>commons-codec</artifactId>
+  		<version>1.9</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>log4j</groupId>
+  		<artifactId>log4j</artifactId>
+  		<version>1.2.17</version>
+  	</dependency>
+  </dependencies>
+  <organization>
+  	<name>Ranjan Java Practice Organization</name>
+  	<url>https://github.com/ranjankumarpatel</url>
+  </organization>
+   <mailingLists>
+        <mailingList>
+            <name>Ranjan Developer</name>
+            <archive>ranjankumarpatel1988@gmail.com</archive>
+        </mailingList>
+    </mailingLists>
+    <developers>
+        <developer>
+            <id>Ranjan Kumar Patel</id>
+            <name>Ranjan Kumar Patel</name>
+            <url>https://github.com/ranjankumarpatel</url>
+            <organization>Ranjan Kumar Patel</organization>
+            <roles>
+                <role>Developer</role>
+            </roles>
+        </developer>
+    </developers>
+</project>
