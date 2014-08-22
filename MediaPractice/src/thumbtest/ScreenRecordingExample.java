@@ -18,7 +18,7 @@ private static final double FRAME_RATE = 50;
     
     private static final int SECONDS_TO_RUN_FOR = 20;
     
-    private static final String outputFilename = "d:/videotest/Shraddha kapoor's secret temptation ad hd.mp4";
+    private static final String outputFilename = "E:/mediatest/screen.mp4";
     
     private static Dimension screenBounds;
 

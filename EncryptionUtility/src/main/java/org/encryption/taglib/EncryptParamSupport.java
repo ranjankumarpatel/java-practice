@@ -4,7 +4,6 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspTagException;
 import javax.servlet.jsp.tagext.Tag;
 
-import org.apache.commons.codec.EncoderException;
 import org.apache.taglibs.standard.resources.Resources;
 import org.apache.taglibs.standard.tag.common.core.ParamParent;
 import org.apache.taglibs.standard.tag.common.core.ParamSupport;

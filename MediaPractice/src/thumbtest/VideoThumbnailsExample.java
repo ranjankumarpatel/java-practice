@@ -22,9 +22,9 @@ public class VideoThumbnailsExample {
 
 	private static String name;
 	
-	private static File videodir = new File("d:/videotest");
+	private static File videodir = new File("E:/mediatest");
     
-    private static final File outputFilePrefix = new File("d:/videotest/snapshots");
+    private static final File outputFilePrefix = new File("E:/mediatest");
     
     // The video stream index, used to ensure we display frames from one and
     // only one video stream from the media container.
@@ -38,8 +38,8 @@ public class VideoThumbnailsExample {
 
     public static void main(String[] args) {
     	
-    	name = "The Lone Ranger Official International Trailer #1 (2013) - Johnny Depp Movie HD - 10Youtube.com";
-    	final String inputFilename = new File(videodir,name+".mp4").getAbsolutePath();
+    	name = "Ultimate Spider-Man_ Web Warriors - 308 [New Warriors]";
+    	final String inputFilename = new File(videodir,name+".flv").getAbsolutePath();
     	
 
         IMediaReader mediaReader = ToolFactory.makeReader(inputFilename);
